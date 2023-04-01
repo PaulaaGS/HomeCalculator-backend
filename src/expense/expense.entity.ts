@@ -1,3 +1,5 @@
+import { OrderStatus } from 'src/enums/order-status';
+import { Unit } from 'src/enums/unit';
 import { Entity, BaseEntity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity()
@@ -19,9 +21,11 @@ export class Expense extends BaseEntity {
     description: string | null;
 
     @Column({
-        length: 10,
+        type:'enum',
+        enum: Unit,
+        default: Unit.PIECE,
     })
-    unit: string;
+    unit: Unit;
 
     @Column({
         type: 'float',
@@ -50,9 +54,11 @@ export class Expense extends BaseEntity {
     paidAmount: number;
 
     @Column({
-        length: 20,
+        type: 'enum',
+        enum: OrderStatus,
+        default: OrderStatus.NOT_ORDERED,
     })
-    status: string;
+    orderStatus: OrderStatus;
 
     @Column({
         length: 2048,
