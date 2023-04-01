@@ -15,3 +15,9 @@ export interface Expense {
 }
 
 export type GetListOfExpensesResponse = Expense[];
+
+export type GetOneExpenseResponse = Expense;
+
+export type CreateExpenseResponse = Expense;
+
+export type UpdateExpenseResponse = Expense;
