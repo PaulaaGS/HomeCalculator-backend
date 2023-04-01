@@ -17,6 +17,7 @@ import { ExpenseModule } from './expense/expense.module';
       bigNumberStrings: false,
       logging: true,
       synchronize: true,
+      autoLoadEntities: true,
     }),
     ExpenseModule,
   ],

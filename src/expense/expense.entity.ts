@@ -3,7 +3,7 @@ import { Unit } from 'src/enums/unit';
 import { Entity, BaseEntity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity()
-export class Expense extends BaseEntity {
+export class Expense {
 
     @PrimaryGeneratedColumn('uuid')
     id: string;
