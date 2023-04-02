@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ExpenseModule } from './expense/expense.module';
+import { SummaryModule } from './summary/summary.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { ExpenseModule } from './expense/expense.module';
       autoLoadEntities: true,
     }),
     ExpenseModule,
+    SummaryModule,
   ],
   controllers: [AppController],
   providers: [AppService],
