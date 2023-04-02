@@ -1,5 +1,5 @@
-import { OrderStatus } from "src/enums/order-status";
-import { Unit } from "src/enums/unit";
+import { OrderStatus } from "../enums/order-status";
+import { Unit } from "../enums/unit";
 
 export interface Expense {
     id: string;

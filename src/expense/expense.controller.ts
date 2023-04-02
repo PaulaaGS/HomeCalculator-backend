@@ -1,7 +1,6 @@
-import { Controller, Get, Inject } from '@nestjs/common';
+import { Controller, Get, Inject, Body, Delete, Param, Post, Put } from '@nestjs/common';
 import { ExpenseService } from './expense.service';
-import { CreateExpenseResponse, GetListOfExpensesResponse, GetOneExpenseResponse, UpdateExpenseResponse } from 'src/interfaces/expense';
-import { Body, Delete, Param, Post, Put } from '@nestjs/common/decorators';
+import { CreateExpenseResponse, GetListOfExpensesResponse, GetOneExpenseResponse, UpdateExpenseResponse } from '../interfaces/expense';
 import { Expense } from './expense.entity';
 
 @Controller('expense')
@@ -9,7 +8,7 @@ export class ExpenseController {
 
     constructor(
         @Inject(ExpenseService) private expenseService: ExpenseService,
-    ) {}
+    ) { }
 
     @Get('/')
     getListOfExpenses(): Promise<GetListOfExpensesResponse> {
