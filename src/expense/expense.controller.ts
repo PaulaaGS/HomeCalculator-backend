@@ -2,6 +2,7 @@ import { Controller, Get, Inject, Body, Delete, Param, Post, Put } from '@nestjs
 import { ExpenseService } from './expense.service';
 import { CreateExpenseResponse, GetListOfExpensesResponse, GetOneExpenseResponse, UpdateExpenseResponse } from '../interfaces/expense';
 import { Expense } from './expense.entity';
+import { GetShortListOfExpenseResponse } from '../interfaces/short-expense';
 
 @Controller('expense')
 export class ExpenseController {
@@ -13,6 +14,11 @@ export class ExpenseController {
     @Get('/')
     getListOfExpenses(): Promise<GetListOfExpensesResponse> {
         return this.expenseService.getExpenses();
+    }
+
+    @Get('/short-list')
+    getShortListOfExpenses(): Promise<GetShortListOfExpenseResponse> {
+        return this.expenseService.getShortListOfExpenses();
     }
 
     @Get('/:id')

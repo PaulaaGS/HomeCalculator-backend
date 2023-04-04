@@ -2,7 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Expense } from './expense.entity';
 import { Repository } from 'typeorm';
-import { CreateExpenseResponse, GetListOfExpensesResponse, UpdateExpenseResponse } from 'src/interfaces/expense';
+import { CreateExpenseResponse, GetListOfExpensesResponse, UpdateExpenseResponse } from '../interfaces/expense';
+import { GetShortListOfExpenseResponse } from '../interfaces/short-expense';
 
 @Injectable()
 export class ExpenseService {
@@ -13,6 +14,20 @@ export class ExpenseService {
 
     async getExpenses(): Promise<GetListOfExpensesResponse> {
         return await this.expenseRepository.find();
+    }
+
+    async getShortListOfExpenses(): Promise<GetShortListOfExpenseResponse> {
+        const expenses = await this.getExpenses()
+        return expenses.map(ex => {
+            const price = ex.unitPriceNet * (ex.vatRate+1) * ex.quantity
+            return {
+                id: ex.id,
+                name: ex.name,
+                paidAmount: ex.paidAmount,
+                price,
+                orderStatus: ex.orderStatus,
+            }
+        })
     }
 
     async getOneExpense(id: string): Promise<Expense> {
