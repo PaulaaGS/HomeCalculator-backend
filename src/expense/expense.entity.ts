@@ -29,14 +29,14 @@ export class Expense {
 
     @Column({
         type: 'float',
-        precision: 6,
+        precision: 9,
         scale: 2,
     })
     unitPriceNet: number;
 
     @Column({
         type: 'float',
-        precision: 6,
+        precision: 2,
         scale: 2,
     })
     vatRate: number;
@@ -50,7 +50,7 @@ export class Expense {
 
     @Column({
         type: 'float',
-        precision: 6,
+        precision: 9,
         scale: 2,
         default: 0,
     })
