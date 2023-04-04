@@ -4,12 +4,10 @@ import { GetSummaryResponse } from '../interfaces/summary';
 
 @Controller('summary')
 export class SummaryController {
-    constructor(
-        @Inject(SummaryService) private summaryService: SummaryService,
-    ) { }
+  constructor(@Inject(SummaryService) private summaryService: SummaryService) {}
 
-    @Get('/')
-    getSummary(): Promise<GetSummaryResponse> {
-        return this.summaryService.getSummary()
-    }
+  @Get('/')
+  getSummary(): Promise<GetSummaryResponse> {
+    return this.summaryService.getSummary();
+  }
 }

@@ -1,6 +1,6 @@
 export interface Summary {
-    expensesSum: number;
-    expensesPaid: number;
+  expensesSum: number;
+  expensesPaid: number;
 }
 
 export type GetSummaryResponse = Summary;
