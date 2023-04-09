@@ -17,11 +17,11 @@ export class ExpenseService {
   ) {}
 
   async getExpenses(): Promise<GetListOfExpensesResponse> {
-    return (await this.expenseRepository.find({
+    return await this.expenseRepository.find({
       order: {
-        createdAt: 'ASC'
-      }
-    }));
+        createdAt: 'ASC',
+      },
+    });
   }
 
   async getShortListOfExpenses(): Promise<GetShortListOfExpenseResponse> {
