@@ -68,4 +68,9 @@ export class Expense {
     nullable: true,
   })
   url: string;
+
+  @Column({
+    default: () => 'CURRENT_TIMESTAMP',
+  })
+  createdAt: Date;
 }
