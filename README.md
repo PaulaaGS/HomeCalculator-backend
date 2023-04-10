@@ -1,73 +1,96 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Home Calculator
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+### Navigation
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+- [About The Project](#about-the-project)
+  - [Demo](#demo)
+  - [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+  - [Installation](#installation)
+- [Roadmap](#roadmap)
+- [Contact](#contact)
 
-## Description
+<br>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+# About The Project
+
+Home Calculator is an application designed for people who likes planning their home budget during the renovation or finishing their home.
+
+![Home Page](/images/readme-01.jpg)
+
+The home page shows a summary of all expenses you will have to pay to finish your home and expenses already incurred.
+
+You can display a list of expenses, add new expense, edit and delete.
+
+![List od expenses](/images/readme-02.jpg)
+![Expense form](/images/readme-03.jpg)
+![Expense](/images/readme-04.jpg)
+
+<br>
+
+## Demo
+
+Here is a short video to show how the app works:
+
+<br>
+
+## Tech Stack
+
+- **TypeScript**
+- **NestJS**
+- **TypeORM**
+- **MySQL**
+
+<br>
+
+# Getting Started
+
+Here is the frontend repository of the application:  
+[HomeCalculator-frontend](https://github.com/PaulaaGS/HomeCalculator-frontend)
 
 ## Installation
 
-```bash
-$ npm install
-```
+1. Clone the repository
+   ```sh
+   git clone https://https://github.com/PaulaaGS/HomeCalculator-backend.git
+   ```
+2. Go to the project directory
+   ```sh
+   cd HomeCalculator-backend
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Start the server development
+   ```js
+   npm start
+   ```
+5. Start the watch mode
+   ```js
+   npm run start:dev
+   ```
+6. Start the production mode
+   ```js
+   npm run start:prod
+   ```
 
-## Running the app
+<br>
 
-```bash
-# development
-$ npm run start
+# Roadmap
 
-# watch mode
-$ npm run start:dev
+Next steps to develop the application:
 
-# production mode
-$ npm run start:prod
-```
+- add browsing history and the ability to return to the previous page using the back arrow
+- filtering (for example by order status)
+- write tests
+- responsive design
+- accessibility
+- add registration panel and logging page
+- add posibility to change language for english and add other currencies and imperial units
 
-## Test
+<br>
 
-```bash
-# unit tests
-$ npm run test
+# Contact
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+Paulina: paulina.a.gaweda@gmail.com
