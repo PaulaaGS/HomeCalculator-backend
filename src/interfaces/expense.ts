@@ -1,3 +1,4 @@
+import { Category } from '../enums/category';
 import { OrderStatus } from '../enums/order-status';
 import { Unit } from '../enums/unit';
 
@@ -12,6 +13,7 @@ export interface Expense {
   paidAmount: number;
   orderStatus: OrderStatus;
   url: string;
+  category: Category;
 }
 
 export type GetListOfExpensesResponse = Expense[];

@@ -19,6 +19,7 @@ export class ExpenseService {
   async getExpenses(): Promise<GetListOfExpensesResponse> {
     return await this.expenseRepository.find({
       order: {
+        category: 'ASC',
         createdAt: 'ASC',
       },
     });
@@ -34,6 +35,7 @@ export class ExpenseService {
         paidAmount: ex.paidAmount,
         price,
         orderStatus: ex.orderStatus,
+        category: ex.category,
       };
     });
   }

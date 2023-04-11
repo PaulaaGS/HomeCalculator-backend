@@ -1,6 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 import { OrderStatus } from '../enums/order-status';
 import { Unit } from '../enums/unit';
+import { Category } from '../enums/category';
 
 @Entity()
 export class Expense {
@@ -68,6 +69,13 @@ export class Expense {
     nullable: true,
   })
   url: string;
+
+  @Column({
+    type: 'enum',
+    enum: Category,
+    default: Category.MAIN,
+  })
+  category: Category;
 
   @Column({
     default: () => 'CURRENT_TIMESTAMP',
