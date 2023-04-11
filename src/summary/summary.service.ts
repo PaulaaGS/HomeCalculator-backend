@@ -11,9 +11,7 @@ export class SummaryService {
 
     const expensesSum = expenses
       .map((ex) => {
-        return Number(
-          (ex.unitPriceGross * ex.quantity).toFixed(2),
-        );
+        return Number((ex.unitPriceGross * ex.quantity).toFixed(2));
       })
       .reduce((prev, curr) => prev + curr, 0);
 
