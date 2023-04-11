@@ -12,7 +12,7 @@ export class SummaryService {
     const expensesSum = expenses
       .map((ex) => {
         return Number(
-          (ex.unitPriceNet * (ex.vatRate + 1) * ex.quantity).toFixed(2),
+          (ex.unitPriceGross * ex.quantity).toFixed(2),
         );
       })
       .reduce((prev, curr) => prev + curr, 0);

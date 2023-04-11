@@ -28,7 +28,7 @@ export class ExpenseService {
   async getShortListOfExpenses(): Promise<GetShortListOfExpenseResponse> {
     const expenses = await this.getExpenses();
     return expenses.map((ex) => {
-      const price = ex.unitPriceNet * (ex.vatRate + 1) * ex.quantity;
+      const price = ex.unitPriceGross * ex.quantity;
       return {
         id: ex.id,
         name: ex.name,
