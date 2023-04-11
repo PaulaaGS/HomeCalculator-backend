@@ -35,6 +35,7 @@ export class ExpenseService {
         paidAmount: ex.paidAmount,
         price,
         orderStatus: ex.orderStatus,
+        category: ex.category,
       };
     });
   }
