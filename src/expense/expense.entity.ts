@@ -32,7 +32,7 @@ export class Expense {
     precision: 9,
     scale: 2,
   })
-  unitPriceNet: number;
+  unitPriceGross: number;
 
   @Column({
     type: 'float',

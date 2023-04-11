@@ -7,7 +7,7 @@ export interface Expense {
   name: string;
   description: string | null;
   unit: Unit;
-  unitPriceNet: number;
+  unitPriceGross: number;
   vatRate: number;
   quantity: number;
   paidAmount: number;
