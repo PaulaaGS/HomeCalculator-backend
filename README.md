@@ -31,6 +31,7 @@ You can display a list of expenses, add new expense, edit and delete.
 ## Demo
 
 Here is a short video to show how the app works:
+[HomeCalculator-demo](https://youtu.be/bmuwpfreNy0)
 
 <br>
 
@@ -77,10 +78,29 @@ Here is the frontend repository of the application:
 
 <br>
 
+## Configuration
+
+You may need to configure connection with your database in .env file:
+
+```
+   DATABASE_HOST
+
+   DATABASE_PORT
+
+   DATABASE_USERNAME
+
+   DATABASE_PASSWORD
+
+   DATABASE_NAME
+```
+
+<br>
+
 # Roadmap
 
 Next steps to develop the application:
 
+- implement sorting rows in the table
 - add browsing history and the ability to return to the previous page using the back arrow
 - filtering (for example by order status)
 - write tests
