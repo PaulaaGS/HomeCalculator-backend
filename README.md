@@ -22,7 +22,7 @@ The home page shows a summary of all expenses you will have to pay to finish you
 
 You can display a list of expenses, add new expense, edit and delete.
 
-![List od expenses](/images/readme-02.jpg)
+![List of expenses](/images/readme-02.jpg)
 ![Expense form](/images/readme-03.jpg)
 ![Expense](/images/readme-04.jpg)
 
